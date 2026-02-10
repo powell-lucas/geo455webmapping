@@ -1,15 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <h1 class="title">Hello World</h1>
-        <div id="mainDiv">Hello Div</div>
-        <br />
-        <button onclick="buttonClicked()">Click me</button>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEO 455 - Lab 1</title>
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.5; }
+    header, main, footer { max-width: 900px; margin: 0 auto; padding: 16px; }
+    nav a { margin-right: 12px; }
+    .hero { background: #f3f3f3; border-radius: 12px; padding: 16px; }
+    .center { text-align: center; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="center">Lucas Powell</h1>
+    <p class="center">GEO 455 • Web Mapping • Spring 2026</p>
+
+    <nav class="center">
+      <a href="#about">About</a>
+      <a href="#books">Books</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <h2>About me</h2>
+      <p>Hi! I’m a Geography major interested in GIS.</p>
+
+      <!-- IMAGE TEMPLATE (required) -->
+      <figure>
+        <!-- If this file is in an images/ folder next to this HTML file, use: images/profile.jpg -->
+        <!-- If this HTML file is inside a labs/ folder, use: ../images/profile.jpg -->
+        <img src="S:\powell.lucas\Geo_455_Webmapping\Lab1\images\IMG_3462.jpeg" alt="Photo of my cat Sokka" width="320">
+        <figcaption>Figure 1. This is a photo of my beautiful stray cat which I adopted last year.
+            His name is Sokka, named after the character from Avatar the Last Airbender!</figcaption>
+      </figure>
+    </section>
+
+    <section id="books">
+      <h2>Books I recently read</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/The_Inheritance_Cycle">The Inheritance Cycle</a></li>
+        <li><a href="https://www.brandonsanderson.com/pages/the-stormlight-archive-series">The Stormlight Archive</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:powell.lucas@uwlax.edu?subject=GEO%20455%20Webmapping">Email me</a>
+        • <a href="https://github.com/powell-lucas">Lucas Powell's Github</a>
+      </p>
+    </section>
+    
+    <section id="ADHD_Button">
+      <h2>ADHD Button</h2>
+      <p>
+        <button>ADHD Button.</button>
+      </p>
+    </section>
+  </main>
+
+<footer class="center">
+    <small><a href="index.html">Back to main page</a></small>
+  </footer>
+</body>
 </html>
