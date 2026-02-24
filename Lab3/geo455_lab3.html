@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <h1 class="title">Hello World</h1>
-        <div id="mainDiv">Hello Div</div>
-        <br />
-        <button onclick="buttonClicked()">Click me</button>
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GEO 455: Lab 2</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  
+  <!-- Make sure you put the leaflet map library AFTER Leaflet's CSS --> 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!--Your choice of Google fonts- make sure to update in CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="geo455_lab3.css" />
+</head>    
+<body>
+  <div id="map"></div>
+
+  <h1 id="title">Lab 3: Webmap with Point Markers</h1>
+
+  <div id="description">
+    <h2>About this map</h2>
+    <p> The map shows some locations that I have personal connections to in the Midwestern United States. It was created through the help of Dr. Gargi Chaudhuri's GEO 455 Webmapping class.</p>
+    <p>Map authored by Lucas Powell</p> <!-- Replace with your name-->
+  </div>
+  <!-- Your map code  -->
+  <script src="lab3_map.js"></script>
+</body>
 </html>
