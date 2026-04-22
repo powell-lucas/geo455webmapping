@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=devicee-width, initial-scale=1" />
+    <title>GEO 455: Final Project</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Leaflet EasyButton -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    
+    <!-- Leaflet Heatmap -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    
+    <style>
+        #map { min-height: calc(100vh - 56px);}
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="geo455_finalproject.css" />
+</head>
+
+<body class="bg-light">
+    
+    <!--Top Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand fw-semibold">Historic Tornadoes in the United States (2010-2020)</span>
+            <span class="fw-semibold">GEO 455: Webmapping Final Project</span>
+            <a href="geo455_finalproject_about.html" class="fw-semibold">About Page and Data Sources</a>
+        </div>
+    </nav>
+    
+    <!-- Page Layout -->
+    <div class="container-fluid">
+        <div class="row g-3 py-3">
+            
+            <!-- Map Column -->
+            <div class="col-lg-9">
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div id="map" title="Interactive Tornado Map"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Info Panel Column -->
+            <div class="col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Map Info</h5>
+                        
+                        <!-- Tornado Details -->
+                        <div class="mb-3">
+                            <h6 class="mb-1">Tornado Details</h6>
+                            <p class="text-muted small mb-2">Click on a tornado marker to see its details.</p>
+                            <div class="small">
+                                <div><span class="fw-semibold">Name / ID:</span> <span id="detail-name">-</span></div>
+                                <div><span class="fw-semibold">Date:</span> <span id="detail-date">-</span></div>
+                                <div><span class="fw-semibold">EF Rating:</span> <span id="detail-ef">-</span></div>
+                                <div><span class="fw-semibold">Fatalities:</span> <span id="detail-fat">-</span></div>
+                                <div><span class="fw-semibold">Injuries:</span> <span id="detail-inj">-</span></div>
+                                <div><span class="fw-semibold">State:</span> <span id="detail-state">-</span></div>
+                                <div><span class="fw-semibold">Path Length:</span> <span id="detail-len">-</span></div>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <!-- Time Slider -->
+                        <div class="mb-3">
+                            <h6 class="mb-1">Filter by Year</h6>
+                            <p class="text-muted small mb-2">Drag the slider to show tornadoes from a specific year.</p>
+                            <input type="range" id="year-slider" class="form-range" min="2010" max="2020" value="2020" step ="1"/>
+                            <div class="small mt-1"><span class="fw-semibold">Year:</span> <span id="year-display">2020</span></div>
+                            <button id="btn-all-years" type="button" class="btn btn-primary btn-sm mt-2">
+                                Show All Years
+                            </button>
+                        </div>
+                        
+                        <hr>
+                        
+                        <!-- Stats Section -->
+                        <div class="mb-3">
+                            <h6 class="mb-1">Current Stats</h6>
+                            <div class="small">
+                                <div><span class="fw-semibold">Tornadoes Shown:</span> <span id="stat-count">-</span></div>
+                                <div><span class="fw-semibold">Total Fatalities:</span> <span id="stat-fat">-</span></div>
+                                <div><span class="fw-semibold">Total Injuries:</span> <span id="stat-inj">-</span></div>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <!-- Instructions -->
+                        <div class="text-muted small mb-0">
+                            <ul>
+                                <li>Use the layer control on the map to switch basemaps.</li>
+                                <li>Use the layer control to toggle tornado layers on or off.</li>
+                                <li>Click on a tornado marker to see its details above.</li>
+                                <li>Click on the globe icon to return to the default view</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- JS Page -->
+    <script src="finalproject_map.js"></script>
+    
+</body>
+</html>
