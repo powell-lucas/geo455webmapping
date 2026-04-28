@@ -54,7 +54,7 @@ function buildIntensityLayer(geojson) {
             var ef = feature.properties["storm_data_search_results.csv.TOR_F_SCALE"];
             return {
                 color: getEFColor(ef),
-                weight: 4,
+                weight: 3.25,
                 opacity: 0.85
             };
         },
