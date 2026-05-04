@@ -1,0 +1,166 @@
+/* Base Styles for Both Pages */
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: "Noto Sans", sans-serif;
+  color: #3d3d3d;
+}
+
+/* Map Page */
+body.map-page {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body.map-page .page-wrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+body.map-page .page-wrapper > .container-fluid {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+body.map-page .page-wrapper > .container-fluid > .row {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+  margin: 0;
+  padding: 12px;
+}
+
+body.map-page .col-lg-9 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+body.map-page .col-lg-9 .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+body.map-page .col-lg-9 .card-body {
+  flex: 1;
+  padding: 0;
+  min-height: 0;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+
+body.map-page .col-lg-3 {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* About Page */
+body.about-page {
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+/* Popup Styles */
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Overlay Pannel */
+#title {
+  position: fixed;
+  top: 10px;
+  left: 50px;
+  font-size: 2em;
+  font-family: "Lora", serif;
+  letter-spacing: .04em;
+  margin: 0;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #777;
+  border-radius: 6px;
+  z-index: 800;
+}
+
+#description {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  width: 320px;
+  max-width: calc(100vw - 20px);
+  padding: 0 15px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #777;
+  border-radius: 6px;
+  z-index: 800;
+}
+
+#description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#description a {
+  color: #005daa;
+  text-decoration: none;
+}
+
+#description a:hover {
+  text-decoration: underline;
+}
+
+/* Legend */
+.legend {
+    background: white;
+    padding: 8px 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+}
+
+.legend-circle {
+    display: inline-block;
+    border-radius: 50%;
+    background: #d73027;
+    border: 1px solid #333;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Card Links */
+.card a {
+    color: #005daa;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
