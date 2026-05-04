@@ -1,0 +1,140 @@
+/* Page + full-screen map - flex layout prevents scrollbar */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+/* Basic styling for the whole page */
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: "Noto Sans", sans-serif;
+  color: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+}
+/* Flex wrapper fills remaining height below navbar */
+.page-wrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* Bootstrap container fills the flex wrapper */
+.page-wrapper > .container-fluid {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* Row fills the container */
+.page-wrapper > .container-fluid > .row {
+  flex: 1;
+  overflow: hidden;
+  margin: 0;
+  padding: 12px;
+}
+/* Map column fills available height */
+.col-lg-9 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* Map card fills the column */
+.col-lg-9 .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.col-lg-9 .card-body {
+  flex: 1;
+  padding: 0;
+}
+/* Map fills the card body */
+#map {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+/* Info panel scrollability */
+.col-lg-3 {
+  height: 100%;
+  overflow-y: auto;
+}
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #000000;
+    color: #ffffff;
+}
+/* Title panel styling */
+#title {
+  position: fixed;
+  top: 10px;
+  left: 50px;
+  font-size: 2em;
+  font-family: "Lora", serif;
+  letter-spacing: .04em;
+  margin: 0;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #777;
+  border-radius: 6px;
+  z-index: 800;
+}
+/* Description panel styling */
+#description {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  width: 320px;
+  max-width: calc(100vw - 20px);
+  padding: 0 15px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #777;
+  border-radius: 6px;
+  z-index: 800;
+}
+/* Paragraph text change */
+#description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/* Style links for description */
+#description a {
+  color: #005daa;
+  text-decoration: none;
+}
+#description a:hover {
+  text-decoration: underline;
+}
+.legend {
+    background: white;
+    padding: 8px 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+.legend-box {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+}
+/* Impact legend circle swatch */
+.legend-circle {
+    display: inline-block;
+    border-radius: 50%;
+    background: #d73027;
+    border: 1px solid #333;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+/* Style links for about/data page */
+.card a {
+    color: #005daa;
+    text-decoration: none;
+}
+.card a:hover {
+    text-decoration: underline;
+}
