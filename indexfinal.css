@@ -64,7 +64,7 @@ body {
 #leftsidebar1,
 #leftsidebar2,
 #leftsidebar3 {
-    background-color: #7b5ea7;
+    background-color: #6C9867;
     border-radius: 6px;
     padding: 10px;
 }
@@ -94,7 +94,7 @@ body {
 }
 
 #leftsidebarmain .menuitem {
-    background-color: #d8c8f0;
+    background-color: #55B14E;
     border-radius: 4px;
     padding: 4px 8px;
     font-size: 0.85em;
@@ -206,7 +206,7 @@ table td ul ul li {
 /* ── Right Sidebar ── */
 #rightsidebar {
     grid-area: right;
-    background-color: #d8d8e8;
+    background-color: #6C9867;
     border-radius: 6px;
     padding: 14px 12px;
     text-align: left;
@@ -224,7 +224,7 @@ table td ul ul li {
 #rightsidebar h3 {
     font-size: 0.95em;
     font-weight: bold;
-    color: #3a1a6e;
+    color: #094809;
     margin-bottom: 2px;
 }
 
