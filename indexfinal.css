@@ -72,7 +72,7 @@ body {
 #leftsidebar1 h4,
 #leftsidebar2 h4,
 #leftsidebar3 h4 {
-    color: #ffffff;
+    color: #094809;
     font-family: "Open Sans", sans-serif;
     font-size: 0.95em;
     font-weight: bold;
@@ -80,7 +80,7 @@ body {
 }
 
 .h3color {
-    color: #ffffff;
+    color: #094809;
 }
 
 /* Sidebar menu list */
@@ -114,7 +114,7 @@ body {
 /* ── Main Content ── */
 #main {
     grid-area: main;
-    background-color: #f0f0f0;
+    background-color: #BCBCBC;
     border-left: 2px solid #738F70;
     border-right: 2px solid #738F70;
     padding: 20px 24px;
